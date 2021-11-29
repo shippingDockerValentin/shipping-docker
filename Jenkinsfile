@@ -3,7 +3,7 @@
 node('master') {
     try {
         stage('build') {
-            git url: 'git@github.com:shipingDockerValentin/shipping-docker.git'
+            git url: 'git@github.com:shippingDockerValentin/shipping-docker.git'
 
             // Start services (Let docker-compose build containers for testing)
             sh "./develop up -d"
