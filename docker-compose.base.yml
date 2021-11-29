@@ -1,0 +1,21 @@
+version: '2'
+services:
+  app:
+    build: 
+      context: ./docker/app
+      dockerfile: Dockerfile
+    image: shippingdocker.com/app
+    volumes:
+     - .:/var/www/html
+    networks:
+     - sd-net
+  node:
+    build: 
+      context: ./docker/node
+      dockerfile: Dockerfile
+    image: shippingdocker.com/node
+    volumes:
+     - .:/var/www/html
+    networks:
+     - sd-net 
+

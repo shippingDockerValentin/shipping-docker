@@ -1,0 +1,14 @@
+version: '2'
+services:
+  app: 
+    extends:
+      file: docker-compose.base.yml
+      service: app
+  node:
+    extends:
+      file: docker-compose.base.yml
+      service: node
+networks:
+  sd-net:
+    driver: "bridge"
+
