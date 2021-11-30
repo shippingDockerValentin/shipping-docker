@@ -45,7 +45,7 @@ jobs:
         run: ./develop composer install
 
       - name: Get CI env file
-        run: cp example.env .env
+        run: cp .env.example .env
       
       - name: Setup Laravel
         run: ./develop art key:generate
